@@ -1,0 +1,2 @@
+# groupMarconi
+Workgroup in Marconi
