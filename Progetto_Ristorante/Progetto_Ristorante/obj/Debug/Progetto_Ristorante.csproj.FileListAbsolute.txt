@@ -1,0 +1,9 @@
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\bin\Debug\Progetto_Ristorante.exe.config
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\bin\Debug\Progetto_Ristorante.exe
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\bin\Debug\Progetto_Ristorante.pdb
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.csprojAssemblyReference.cache
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.Form1.resources
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.Properties.Resources.resources
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.csproj.GenerateResource.cache
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.exe
+C:\Users\andre\source\asuba\Progetto_Ristorante\Progetto_Ristorante\obj\Debug\Progetto_Ristorante.pdb
