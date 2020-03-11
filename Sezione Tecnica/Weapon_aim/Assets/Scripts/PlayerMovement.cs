@@ -8,18 +8,35 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;  //imposta la velocità
 
     public Rigidbody2D rb; //riferimento al rigidbody
-    public Camera cam;  //riferimento alla camera
+    public Camera cam;  
 
     Vector2 movement;
     Vector2 mousePos;
 
+
+   
+
+
     // Update is called once per frame
     void Update()
     {
-     movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
-     movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
+     
+        movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
+                movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
+        if (Input.GetKey(KeyCode.LeftShift))
+            moveSpeed = 10f;
+        else
+            moveSpeed = 5f;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            moveSpeed = 20f;
 
-     mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        }
+
+
+
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
    private void FixedUpdate()
@@ -30,4 +47,6 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Athan2 consiste in una variazione dell'arcotangente(Vedere su wikipedia per spiegazione)
         rb.rotation = angle;
     }
+
+  
 }
