@@ -4,41 +4,35 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  
     public float moveSpeed = 5f;  //imposta la velocità
-
     public Rigidbody2D rb; //riferimento al rigidbody
-    public Camera cam;  
-
+    public Camera cam;
     Vector2 movement;
     Vector2 mousePos;
-
-
-   
-
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-     
+        rb = GetComponent<Rigidbody2D>();
+       
+    }
+    void Movement()
+    {
         movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
-                movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
+        movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
+
         if (Input.GetKey(KeyCode.LeftShift))
             moveSpeed = 10f;
         else
             moveSpeed = 5f;
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            moveSpeed = 20f;
 
         }
-
-
-
-
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
-
+    void Update()
+    {
+        Movement();
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);        
+    }
    private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
