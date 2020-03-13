@@ -24,16 +24,29 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movement();
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);        
-    }
-   private void FixedUpdate()
-    {
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 10;
+        }
+        else
+        {
+            moveSpeed = 5;
+        }
+
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position; //fa in modo che possiamo ottenere il punto da cui parte il colpo grazie alla sottrazione dei vettori
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Athan2 consiste in una variazione dell'arcotangente(Vedere su wikipedia per spiegazione)
         rb.rotation = angle;
     }
+   private void FixedUpdate()
+    {
+        
+    }
 
   
 }
+
+
