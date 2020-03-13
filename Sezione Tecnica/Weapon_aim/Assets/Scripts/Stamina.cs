@@ -8,6 +8,7 @@ public class Stamina : MonoBehaviour
     public Slider StaminaBar;
     public float MaxStamina;
     public float StaminaLoss;
+    public float StaminaGain;
     public float moveSpeed = 5f;
     void Start()
     {
@@ -17,18 +18,19 @@ public class Stamina : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MaxStamina = Mathf.Abs(MaxStamina); //ritorna sempre il valore assoluto
         if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = 10f;
             MaxStamina -= StaminaLoss * Time.deltaTime;
             StaminaBar.value = MaxStamina;
-            if (MaxStamina <= 0)
-            {
-                moveSpeed = 5;
-            }
         }
-        
-       
+        else
+        {
+            moveSpeed = 5f;
+            MaxStamina += StaminaGain * Time.deltaTime;
+            StaminaBar.value = MaxStamina;
+        }
        
     }
 }
