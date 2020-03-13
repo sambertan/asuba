@@ -19,14 +19,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
         movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
 
-        if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 10f;
-        else
-            moveSpeed = 5f;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-        }
+        
     }
     void Update()
     {
