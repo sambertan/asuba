@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;  //imposta la velocità
+    public float defaultMovementSpeed = 5f;  //imposta la velocità
+    public float runMultipler = 2;
     public Rigidbody2D rb; //riferimento al rigidbody
     public Camera cam;
     Vector2 movement;
@@ -23,19 +24,22 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        float movementSpeed = defaultMovementSpeed;
+
         Movement();
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && Stamina.canRun)
         {
-            moveSpeed = 10;
+            movementSpeed *= runMultipler;
+            Stamina.running = true;
         }
         else
         {
-            moveSpeed = 5;
+            Stamina.running = false;
         }
 
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position; //fa in modo che possiamo ottenere il punto da cui parte il colpo grazie alla sottrazione dei vettori
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Athan2 consiste in una variazione dell'arcotangente(Vedere su wikipedia per spiegazione)

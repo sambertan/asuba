@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -804, y: 313}
+  m_AnchoredPosition: {x: -574, y: 234}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537459748
@@ -845,7 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e6cc4727dd4ad43867b8b8dae01f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  defaultMovementSpeed: 5
+  runMultipler: 2
   rb: {fileID: 878077163}
   cam: {fileID: 519420031}
 --- !u!50 &878077163
@@ -1114,7 +1115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -804, y: 242}
+  m_AnchoredPosition: {x: -588, y: 158}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444922415
@@ -1179,11 +1180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c03c8133d89b6342a9403148f32cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StaminaBar: {fileID: 1444922415}
-  MaxStamina: 100
-  StaminaLoss: 20
-  StaminaGain: 20
-  moveSpeed: 5
+  staminaBar: {fileID: 1444922415}
+  maxStamina: 100
+  actualStamina: 100
+  staminaLoss: 20
+  staminaGain: 20
 --- !u!1 &1466094686
 GameObject:
   m_ObjectHideFlags: 0

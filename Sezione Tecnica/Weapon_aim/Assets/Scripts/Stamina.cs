@@ -2,35 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class Stamina : MonoBehaviour
 {
-    public Slider StaminaBar;
-    public float MaxStamina;
-    public float StaminaLoss;
-    public float StaminaGain;
-    public float moveSpeed = 5f;
+    static public bool running = false;
+    static public bool canRun = true;
+
+    public Slider staminaBar;
+    public float maxStamina=100;
+    public float actualStamina = 100;
+    public float staminaLoss=20;
+    public float staminaGain=20;
+    public static int preRechargeTime = 2000;
+
+    public Thread coolThread;
+
     void Start()
     {
-        StaminaBar.maxValue = MaxStamina;
+        staminaBar.maxValue = maxStamina;
+        coolThread = new Thread(threadCoolDown);
     }
 
     // Update is called once per frame
     void Update()
     {
-        MaxStamina = Mathf.Abs(MaxStamina); //ritorna sempre il valore assoluto
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (running && actualStamina > 0)
         {
-            moveSpeed = 10f;
-            MaxStamina -= StaminaLoss * Time.deltaTime;
-            StaminaBar.value = MaxStamina;
+            actualStamina -= staminaLoss * Time.deltaTime;
+            staminaBar.value = actualStamina;
+            if (actualStamina < 0)
+            {
+                canRun = false;
+                if (!coolThread.IsAlive)
+                {
+                    coolThread.Start();
+                }
+            }
         }
-        else
+        else if (actualStamina < maxStamina  && !coolThread.IsAlive)
         {
-            moveSpeed = 5f;
-            MaxStamina += StaminaGain * Time.deltaTime;
-            StaminaBar.value = MaxStamina;
+            actualStamina += staminaGain * Time.deltaTime;
+            staminaBar.value = actualStamina;
+            if (actualStamina > maxStamina / 5)
+            {
+                canRun = true;
+            }
+            coolThread = new Thread(threadCoolDown); //reinstanzia il trhead per permettere di richiamare più volte il metodo
         }
-       
+
+    }
+
+    static void threadCoolDown()
+    {
+        Thread.Sleep(preRechargeTime);
     }
 }
