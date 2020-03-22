@@ -5,11 +5,19 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
   //  public GameObject hitEffect;
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collidedElement)
     {
-       /* GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity); 
-        Destroy(effect, 5f);
+        Enemy collidedScript = collidedElement.GetComponent<Enemy>();
+
+        if (collidedScript != null)
+        {
+            collidedScript.ChangeHealth(-2);
+        }
+        else
+            Debug.LogWarning("non nemico");
+        
         Destroy(gameObject);
-        */
     }
+
+    
 }
