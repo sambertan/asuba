@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float defaultMovementSpeed = 5f;  //imposta la velocità
@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            
+        }
         float movementSpeed = defaultMovementSpeed;
 
         Movement();
