@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Men\xF9.unity"
+    guid: 1f1dd28b45b21654998c7e1f60050ab5
+  - enabled: 1
     path: Assets/Scenes/Boss scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
