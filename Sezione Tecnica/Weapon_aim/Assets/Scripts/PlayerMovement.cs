@@ -10,18 +10,20 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     Vector2 movement;
     Vector2 mousePos;
+
+    public int maxHealth=10;
+    int actualHealth;
+
+    public int ActualHealth { get => actualHealth;}
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
+        actualHealth = maxHealth;
     }
-    void Movement()
-    {
-        movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
-        movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
+    
 
-        
-    }
+
     void Update()
     {
         float movementSpeed = defaultMovementSpeed;
@@ -45,10 +47,18 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Athan2 consiste in una variazione dell'arcotangente(Vedere su wikipedia per spiegazione)
         rb.rotation = angle;
     }
-   private void FixedUpdate()
+
+    void Movement()
     {
-        
+        movement.x = Input.GetAxisRaw("Horizontal");    //imposta A/D/<-/-> per muoversi a destra e sinistra
+        movement.y = Input.GetAxisRaw("Vertical");   //imposta S/W/freccia in su e in giu per muoversi su e giu
     }
+
+    public void ChangeHealth(int amount)
+    {
+        actualHealth = Mathf.Clamp(actualHealth + amount, 0, maxHealth);
+    }
+    
 
   
 }
