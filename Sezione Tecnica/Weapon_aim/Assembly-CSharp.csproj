@@ -63,14 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\2D\Movement.cs" />
+    <Compile Include="Assets\Scripts\3D\Bullet.cs" />
+    <Compile Include="Assets\Scripts\3D\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\3D\Shooting.cs" />
+    <Compile Include="Assets\Scripts\3D\Stamina.cs" />
     <Compile Include="Assets\Scripts\Boss_AI.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Camera_follow.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Main_menu.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Shooting.cs" />
-    <Compile Include="Assets\Scripts\Stamina.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/abell/OneDrive/Documents/GitHub/asuba/Sezione Tecnica/Weapon_aim/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

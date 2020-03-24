@@ -996,7 +996,6 @@ GameObject:
   - component: {fileID: 878077162}
   - component: {fileID: 878077166}
   - component: {fileID: 878077167}
-  - component: {fileID: 878077168}
   m_Layer: 0
   m_Name: Player_test
   m_TagString: Untagged
@@ -1205,32 +1204,6 @@ PolygonCollider2D:
       - {x: 0.345, y: 0.074999996}
       - {x: 0.355, y: 0.065}
       - {x: 0.355, y: 0.074999996}
---- !u!61 &878077168
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878077161}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11257896, y: -0.43930727}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.07, y: 3.13}
-    newSize: {x: 3.6, y: 4.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4605258, y: 1.4840568}
-  m_EdgeRadius: 0
 --- !u!1 &923534057
 GameObject:
   m_ObjectHideFlags: 0
