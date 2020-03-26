@@ -26,10 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            
-        }
+       
         float movementSpeed = defaultMovementSpeed;
 
         Movement();
