@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Main_menu : MonoBehaviour
 {
-    public void Play()
+    public Main_menu main_menù;
+   public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
     public void Quit()
     {
+        Debug.Log("Arrivesos");
         Application.Quit();
+    }
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+           
+        }
     }
 }
