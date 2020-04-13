@@ -27,8 +27,8 @@ public class PController2D : Player
     // Update is called once per frame
     void Update()
     {
-        //Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround); groundcheck buggato 
-        Grounded = true;
+        Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround);  
+       // Grounded = true;
         Movement_character();
 
     }
