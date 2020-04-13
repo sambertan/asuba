@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Movement : Player
+public class PController2D : Player
 {
     public float defaultMovementSpeed = 5f;  
     public float runMultipler = 2;
@@ -27,7 +27,8 @@ public class Movement : Player
     // Update is called once per frame
     void Update()
     {
-        Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround);
+        //Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround); groundcheck buggato 
+        Grounded = true;
         Movement_character();
 
     }

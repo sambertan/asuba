@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class PlayerMovement : Player
+public class PController3D : Player
 {
     public float defaultMovementSpeed = 5f;  //imposta la velocità
     public float runMultipler = 2;
