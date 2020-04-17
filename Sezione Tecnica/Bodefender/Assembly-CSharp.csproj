@@ -72,7 +72,9 @@
     <Compile Include="Assets\Scripts\Camera_follow.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Main_menu.cs" />
+    <Compile Include="Assets\Scripts\Options_menu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Settings_menu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
