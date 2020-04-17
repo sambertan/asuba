@@ -63,50 +63,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Camera_following.cs" />
     <Compile Include="Assets\Scripts\2D\PController2D.cs" />
     <Compile Include="Assets\Scripts\3D\Bullet.cs" />
     <Compile Include="Assets\Scripts\3D\PController3D.cs" />
     <Compile Include="Assets\Scripts\3D\Shooting.cs" />
     <Compile Include="Assets\Scripts\3D\Stamina.cs" />
     <Compile Include="Assets\Scripts\Boss_AI.cs" />
-    <Compile Include="Assets\Scripts\Camera_follow.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Main_menu.cs" />
-    <Compile Include="Assets\Scripts\Options_menu.cs" />
+    <Compile Include="Assets\Scripts\Menu\Main_menu.cs" />
+    <Compile Include="Assets\Scripts\Menu\Options_menu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Settings_menu.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/sambe/Documents/GitHub/asuba/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/abell/OneDrive/Documents/PCTO/Sezione Tecnica/Bodefender/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

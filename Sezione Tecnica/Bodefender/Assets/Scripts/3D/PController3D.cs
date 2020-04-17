@@ -38,6 +38,11 @@ public class PController3D : Player
             Stamina.running = false;
         }
 
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        }
+
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position; //fa in modo che possiamo ottenere il punto da cui parte il colpo grazie alla sottrazione dei vettori

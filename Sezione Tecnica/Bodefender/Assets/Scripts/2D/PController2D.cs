@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PController2D : Player
@@ -30,6 +31,11 @@ public class PController2D : Player
         Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround);  
        // Grounded = true;
         Movement_character();
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
 
     }
     void Movement_character()
