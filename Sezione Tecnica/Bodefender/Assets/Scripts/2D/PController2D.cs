@@ -17,12 +17,15 @@ public class PController2D : Player
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask WhatsIsGround;
+
+    private SpriteRenderer sprite;
    
         
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         extrajump = extrajumpValue;
+        sprite = GetComponent<SpriteRenderer>();
         base.Start();
     }
 
@@ -32,6 +35,8 @@ public class PController2D : Player
         Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround);  
        // Grounded = true;
         Movement_character();
+        Direction();
+
 
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -59,8 +64,16 @@ public class PController2D : Player
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
         }
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f ,0f);
+        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), 0f );
         transform.Translate( movement * Time.deltaTime * defaultMovementSpeed);
+    }
+
+    void Direction()
+    {
+        if (Input.GetAxis("Horizontal") > 0)
+            sprite.flipX = false;
+        else if (Input.GetAxis("Horizontal")     < 0)
+            sprite.flipX = true;
     }
     
 }

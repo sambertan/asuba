@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\2D\EnemyMovementBackAndForth.cs" />
     <Compile Include="Assets\Scripts\2D\EnemyMovementOnlyForth.cs" />
     <Compile Include="Assets\Scripts\2D\PController2D.cs" />
+    <Compile Include="Assets\Scripts\2D\Trampolino.cs" />
     <Compile Include="Assets\Scripts\3D\Bullet.cs" />
     <Compile Include="Assets\Scripts\3D\PController3D.cs" />
     <Compile Include="Assets\Scripts\3D\Shooting.cs" />
