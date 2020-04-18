@@ -18,11 +18,12 @@ public class PController2D : Player
     public float checkRadius;
     public LayerMask WhatsIsGround;
    
-    
+        
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         extrajump = extrajumpValue;
+        base.Start();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class PController2D : Player
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
-
+        base.Update();
     }
     void Movement_character()
     {
@@ -59,7 +60,7 @@ public class PController2D : Player
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
         }
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f ,0f);
-        transform.position += movement * Time.deltaTime * defaultMovementSpeed;
+        transform.Translate( movement * Time.deltaTime * defaultMovementSpeed);
     }
     
 }

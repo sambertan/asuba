@@ -16,6 +16,7 @@ public class PController3D : Player
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        base.Start();
     }
     
 
@@ -48,6 +49,7 @@ public class PController3D : Player
         Vector2 lookDir = mousePos - rb.position; //fa in modo che possiamo ottenere il punto da cui parte il colpo grazie alla sottrazione dei vettori
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Athan2 consiste in una variazione dell'arcotangente(Vedere su wikipedia per spiegazione)
         rb.rotation = angle;
+        base.Update();
     }
 
     void Movement()
