@@ -63,13 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Camera_following.cs" />
+    <Compile Include="Assets\Scripts\2D\Enemy_slime.cs" />
     <Compile Include="Assets\Scripts\2D\PController2D.cs" />
     <Compile Include="Assets\Scripts\3D\Bullet.cs" />
     <Compile Include="Assets\Scripts\3D\PController3D.cs" />
     <Compile Include="Assets\Scripts\3D\Shooting.cs" />
     <Compile Include="Assets\Scripts\3D\Stamina.cs" />
     <Compile Include="Assets\Scripts\Boss_AI.cs" />
+    <Compile Include="Assets\Scripts\Camera_following.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Menu\Main_menu.cs" />
     <Compile Include="Assets\Scripts\Menu\Options_menu.cs" />
