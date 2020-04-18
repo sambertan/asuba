@@ -8,31 +8,46 @@ public class Player : MonoBehaviour
     public int maxShield = 10;
     protected int actualHealth;
     protected int actualShield;
+    public float damageImmunityTime=3;
+    protected float damageTimeLeft=0;
 
     public int ActualHealth { get => actualHealth; }
     public int ActualShield { get => actualShield; }
 
-    private void Start()
+    protected void Start()
     {
         actualHealth = maxHealth;
-        actualShield = maxShield;
+        //actualShield = maxShield;
+        Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
+    }
+
+    protected void Update()
+    {
+        if (damageTimeLeft > 0)
+        {
+            damageTimeLeft -= Time.deltaTime;
+        }
     }
 
 
     public void Damage(int amount)
     {
         if (amount < 1) return;
+        if (damageTimeLeft > 0) return;
         else if (actualShield > 0)
         {
             int oldShield = actualShield;
             actualShield = Mathf.Clamp(actualShield - amount, 0, maxShield);
-            if(actualShield==0)
-            Damage(Mathf.Abs(oldShield - amount));
+            if (actualShield == 0)
+                Damage(Mathf.Abs(oldShield - amount));
         }
         else
         {
             actualHealth = Mathf.Clamp(actualHealth - amount, 0, maxHealth);
         }
+        Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
+        damageTimeLeft = damageImmunityTime;
+        
     }
 
     public void HealLife(int amount)
