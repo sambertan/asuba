@@ -72,8 +72,11 @@ public class PController2D : Player
     {
         if (Input.GetAxis("Horizontal") > 0)
             sprite.flipX = false;
-        else if (Input.GetAxis("Horizontal")     < 0)
+        else if (Input.GetAxis("Horizontal") < 0)
             sprite.flipX = true;
+       
+        
+        
     }
     
 }

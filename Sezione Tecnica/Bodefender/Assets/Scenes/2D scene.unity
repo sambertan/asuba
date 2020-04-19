@@ -202,6 +202,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &301465824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301465825}
+  m_Layer: 0
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &301465825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301465824}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7087054, w: 0.7055046}
+  m_LocalPosition: {x: 1.24, y: 0.18, z: -4.106627}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2046859051}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &368246659
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,9 +919,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b8c52b41bf5e55469b83dcf5c41be71, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56bf0f41f002e2540a1763cb755cf2cc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.022
+  m_Volume: 0.553
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1720,6 +1750,33 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2046859045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+    type: 3}
+  m_PrefabInstance: {fileID: 3376819694182923903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2046859051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3376819693851110297, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+    type: 3}
+  m_PrefabInstance: {fileID: 3376819694182923903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046859052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046859045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b8c719995999040926029a4a0dcc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 301465825}
+  bulletPrefab: {fileID: 1994643163935594522, guid: 37c5be3245d5efd4ab7f7d8c32ae047a,
+    type: 3}
 --- !u!1001 &3224341681580180056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1796,6 +1853,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3376819692466372634, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.465
+      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110297, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1864,7 +1926,7 @@ PrefabInstance:
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_Name
-      value: leuco-city
+      value: Leuco
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac4eb8c59269c5f4180f19e0f63b3e07, type: 3}

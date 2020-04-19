@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-  //  public GameObject hitEffect;
+    //  public GameObject hitEffect;
+    public float speed = 20f;
+    public Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb.velocity = transform.right * speed;
+    }
     void OnTriggerEnter2D(Collider2D collidedElement)
     {
         Enemy collidedScript = collidedElement.GetComponent<Enemy>();
