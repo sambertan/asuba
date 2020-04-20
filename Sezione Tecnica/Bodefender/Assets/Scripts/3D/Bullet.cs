@@ -8,22 +8,33 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb;
 
+
     private void Start()
     {
         rb.velocity = transform.right * speed;
     }
     void OnTriggerEnter2D(Collider2D collidedElement)
     {
-        Enemy collidedScript = collidedElement.GetComponent<Enemy>();
+        Enemy collidedScriptE = collidedElement.GetComponent<Enemy>();
+        Player collidedScriptP = collidedElement.GetComponent<Player>();
 
-        if (collidedScript != null)
+        if (collidedScriptE != null)
         {
-            collidedScript.ChangeHealth(-2);
+            collidedScriptE.ChangeHealth(-2);
         }
         else
             Debug.LogWarning("non nemico");
         
-        Destroy(gameObject);
+        if (collidedScriptP == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("Player");
+        }
+        
+
     }
 
     
