@@ -11,15 +11,16 @@ public class PController2D : Player
     public float runMultipler = 2;
     public Rigidbody2D rb; 
     public Camera cam;
-    
+
 
     //double-jump
+    public float jumpVelocity;
     private bool Grounded;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask WhatsIsGround;
-    public int extrajump;
-    public int extrajumpValue;
+    public Transform gCheck;
+    public float Radius = 0.6f;
+    public LayerMask Ground;
+    
+    
 
     //sprite
     private SpriteRenderer sprite;
@@ -32,7 +33,7 @@ public class PController2D : Player
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        extrajump = extrajumpValue;
+      
         sprite = GetComponent<SpriteRenderer>();
         base.Start();
     }
@@ -40,8 +41,8 @@ public class PController2D : Player
     // Update is called once per frame
     void Update()
     {
-        Grounded = Physics2D.OverlapCircle(groundCheck.position , checkRadius , WhatsIsGround);  
-       // Grounded = true;
+         
+      
         Movement_character();
         Direction();
 
@@ -59,21 +60,15 @@ public class PController2D : Player
             float movementSpeed = defaultMovementSpeed;
             movementSpeed *= runMultipler;
         }
-        if(Grounded == true)
-        {
-            extrajump = extrajumpValue;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && extrajump > 0)
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
-            extrajump--;
-        }
-        else if(Input.GetKeyDown(KeyCode.Space) && extrajump == 0 && Grounded == true)
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
-        }
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), 0f );
         transform.Translate( movement * Time.deltaTime * defaultMovementSpeed);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(Vector3.up * jumpVelocity, ForceMode2D.Impulse);
+            Grounded = false;
+        }
+        Grounded = Physics2D.OverlapCircle(gCheck.position, Radius, Ground);
     }
 
     void Direction()

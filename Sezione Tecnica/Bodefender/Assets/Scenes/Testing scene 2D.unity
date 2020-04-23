@@ -127,6 +127,12 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 8221749410854417249}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1652854784 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3376819692466372634, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+    type: 3}
+  m_PrefabInstance: {fileID: 3376819694182923903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &518008057536786467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -544,6 +550,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1164430531}
+    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+        type: 3}
+      propertyPath: gCheck
+      value: 
+      objectReference: {fileID: 1652854784}
+    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_Name
