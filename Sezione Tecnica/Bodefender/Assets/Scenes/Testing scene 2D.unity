@@ -7574,7 +7574,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.429487
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7636,7 +7636,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 63
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6995411
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
