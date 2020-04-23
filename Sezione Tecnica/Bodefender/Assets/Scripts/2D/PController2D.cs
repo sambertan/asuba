@@ -6,19 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class PController2D : Player
 {
+    //movement
     public float defaultMovementSpeed = 5f;  
     public float runMultipler = 2;
     public Rigidbody2D rb; 
     public Camera cam;
-    public int extrajump;
-    public int extrajumpValue;
+    
 
+    //double-jump
     private bool Grounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask WhatsIsGround;
+    public int extrajump;
+    public int extrajumpValue;
 
+    //sprite
     private SpriteRenderer sprite;
+
+    //proiettili
+    public static int direction;
+
    
         
     void Start()
@@ -71,9 +79,15 @@ public class PController2D : Player
     void Direction()
     {
         if (Input.GetAxis("Horizontal") > 0)
+        {   
             sprite.flipX = false;
+            direction = 1;
+        }
         else if (Input.GetAxis("Horizontal") < 0)
+        {
             sprite.flipX = true;
+            direction = -1;
+        }
        
         
         

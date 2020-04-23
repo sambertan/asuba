@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301465824}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7087054, w: 0.7055046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.24, y: 0.18, z: -4.106627}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3376819692466372635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.043, y: -1.465, z: -128.4546}
+  m_LocalPosition: {x: -0.043, y: -1.465, z: -128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3376819693851110297}
@@ -188,13 +188,14 @@ MonoBehaviour:
   runMultipler: 2
   rb: {fileID: 3376819693851110296}
   cam: {fileID: 0}
-  extrajump: 0
-  extrajumpValue: 1
   groundCheck: {fileID: 3376819692466372634}
   checkRadius: 0.5
   WhatsIsGround:
     serializedVersion: 2
     m_Bits: 256
+  extrajump: 0
+  extrajumpValue: 1
+  firepointP: {fileID: 0}
 --- !u!95 &3376819693851110294
 Animator:
   serializedVersion: 3
