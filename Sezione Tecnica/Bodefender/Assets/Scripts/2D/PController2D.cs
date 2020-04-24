@@ -19,8 +19,9 @@ public class PController2D : Player
     public Transform gCheck;
     public float Radius = 0.6f;
     public LayerMask Ground;
-    
-    
+
+    //Death
+    public Transform Spawn;
 
     //sprite
     private SpriteRenderer sprite;
@@ -41,11 +42,12 @@ public class PController2D : Player
     // Update is called once per frame
     void Update()
     {
-         
-      
+
+       
         Movement_character();
         Direction();
-
+        Respawn();
+      
 
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -87,5 +89,14 @@ public class PController2D : Player
         
         
     }
+    void Respawn()
+    {
+        if(actualHealth == 0)
+        {
+            rb.transform.position = Spawn.position;
+        }
+    }
     
+
+
 }
