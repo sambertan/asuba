@@ -188,13 +188,12 @@ MonoBehaviour:
   runMultipler: 2
   rb: {fileID: 3376819693851110296}
   cam: {fileID: 0}
-  groundCheck: {fileID: 3376819692466372634}
-  checkRadius: 0.5
-  WhatsIsGround:
+  jumpVelocity: 5
+  gCheck: {fileID: 3376819692466372634}
+  Radius: 0.6
+  Ground:
     serializedVersion: 2
-    m_Bits: 256
-  extrajump: 0
-  extrajumpValue: 1
+    m_Bits: 0
 --- !u!95 &3376819693851110294
 Animator:
   serializedVersion: 3
