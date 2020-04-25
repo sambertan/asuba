@@ -20,10 +20,6 @@ public class PController2D : Player
     public float Radius = 0.6f;
     public LayerMask Ground;
 
-
-    //sprite
-    private SpriteRenderer sprite;
-
     //proiettili
     public static int direction;
 
@@ -33,7 +29,6 @@ public class PController2D : Player
     {
         rb = GetComponent<Rigidbody2D>();
       
-        sprite = GetComponent<SpriteRenderer>();
         base.Start();
     }
 

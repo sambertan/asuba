@@ -13,7 +13,7 @@ public class healShield : MonoBehaviour
             if(player.ActualShield<player.maxShield)
             {
                 player.HealArmor(healing);
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
     }

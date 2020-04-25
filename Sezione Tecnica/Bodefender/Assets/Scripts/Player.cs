@@ -17,13 +17,22 @@ public class Player : MonoBehaviour
     public int ActualHealth { get => actualHealth; }
     public int ActualShield { get => actualShield; }
 
+    //Blinking and sprite management
+    public float blinkingGapS = 0.2f;
+    float blinkingleft;
+    public Color BlinkingColor;
+    protected SpriteRenderer sprite;
+    bool ended;
+
     protected void Start()
     {
         spawnPoint = transform.position;
 
         actualHealth = maxHealth;
         //actualShield = maxShield;
-        Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
+        actualShield = 0;
+
+        sprite=GetComponent<SpriteRenderer>();
     }
 
     protected void Update()
@@ -31,6 +40,18 @@ public class Player : MonoBehaviour
         if (damageTimeLeft > 0)
         {
             damageTimeLeft -= Time.deltaTime;
+            if (blinkingleft > 0)
+                blinkingleft -= Time.deltaTime;
+            else
+            {
+                ChangeBlink();
+                blinkingleft = blinkingGapS;
+            }
+        }
+        else if (!ended)
+        {
+            ended = true;
+            sprite.color = Color.white;
         }
     }
 
@@ -53,24 +74,27 @@ public class Player : MonoBehaviour
             {
                 Die();
             }
-            Blink();
         }
         Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
+        Debug.Log($"shieldPlayer:{actualShield}/{maxShield}");
         damageTimeLeft = damageImmunityTime;
-        
+        blinkingleft = blinkingGapS;
+        ChangeBlink();
+        ended = false;
     }
 
     public void HealLife(int amount)
     {
         if (amount < 1) return;
         actualHealth = Mathf.Clamp(actualHealth + amount, 0, maxHealth);
+        Debug.Log($"Curato lifePlayer:{actualHealth}/{maxHealth}");
     }
 
     public void HealArmor(int amount)
     {
         if (amount < 1) return;
         actualShield = Mathf.Clamp(actualShield + amount, 0, maxShield);
-        Debug.Log($"Curato lifePlayer:{actualHealth}/{maxHealth}");
+        Debug.Log($"Shieldato shieldPlayer:{actualShield}/{maxShield}");
     }
 
     public void Die()
@@ -81,23 +105,12 @@ public class Player : MonoBehaviour
 
     #region privates
 
-    public void Blink()
+    void ChangeBlink()
     {
-        SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
-        Thread blinking = new Thread(() =>
-        {
-            for(int i = 0; i<15; i++)
-            {
-                sprite.color = new Color(242, 255, 85);
-                Thread.Sleep(3000 / 15);
-                sprite.color = new Color(0, 0, 0);
-                Thread.Sleep(3000 / 15);
-            }
-            sprite.color = new Color(0, 0, 0);
-        });
-
-        blinking.Start();
-        
+        if (sprite.color == new Color(255, 255, 255))
+            sprite.color = BlinkingColor;
+        else
+            sprite.color = new Color(255, 255, 255);
     }
 
     #endregion
