@@ -10,12 +10,13 @@ public class Player : MonoBehaviour
     protected int actualShield;
     public float damageImmunityTime=3;
     protected float damageTimeLeft=0;
-
+    public Vector3 Spawn;
     public int ActualHealth { get => actualHealth; }
     public int ActualShield { get => actualShield; }
 
     protected void Start()
     {
+        Spawn = transform.position;
         actualHealth = maxHealth;
         //actualShield = maxShield;
         Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
@@ -44,6 +45,11 @@ public class Player : MonoBehaviour
         else
         {
             actualHealth = Mathf.Clamp(actualHealth - amount, 0, maxHealth);
+            if(actualHealth == 0)
+            {
+                actualHealth = maxHealth;
+                transform.position = Spawn;
+            }
         }
         Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
         damageTimeLeft = damageImmunityTime;
