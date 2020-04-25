@@ -12,8 +12,9 @@ public class healHealth : MonoBehaviour
         {
             if (player.ActualHealth < player.maxHealth)
             {
+                Debug.Log("curato in teoria");
                 player.HealLife(healing);
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
     }

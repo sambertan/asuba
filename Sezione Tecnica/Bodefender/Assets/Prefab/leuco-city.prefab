@@ -184,6 +184,7 @@ MonoBehaviour:
   maxHealth: 10
   maxShield: 10
   damageImmunityTime: 3
+  spawnPoint: {x: 0, y: 0, z: 0}
   defaultMovementSpeed: 5
   runMultipler: 2
   rb: {fileID: 3376819693851110296}

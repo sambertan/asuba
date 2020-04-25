@@ -21382,26 +21382,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1164430531}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: Spawn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: Spawn.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: Spawn.y
-      value: -2
-      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_Name
