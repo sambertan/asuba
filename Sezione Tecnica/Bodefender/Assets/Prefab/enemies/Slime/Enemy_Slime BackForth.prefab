@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6973071954930721320}
   - component: {fileID: 6973071954930721321}
   - component: {fileID: 1588634874336267847}
+  - component: {fileID: 827143319}
   m_Layer: 0
   m_Name: Enemy_Slime BackForth
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6973071954930721322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.53, y: -1.67, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2.044, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -143,8 +144,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75505a279acce5845ab4e33336b56af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
   speed: 1
   time: 3
   moveRight: 0
   dannoContatto: 1
+  health: 3
+  animator: {fileID: 827143319}
+--- !u!95 &827143319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973071954930721322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb3631df8bfbd6b48a9b3cd8e757fcc5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

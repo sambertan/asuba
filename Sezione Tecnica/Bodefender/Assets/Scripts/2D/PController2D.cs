@@ -44,7 +44,7 @@ public class PController2D : Player
         Movement_character();
         Direction();
 
-       // animator.SetFloat("Speed", Math.Abs( horizontalMove));
+        animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
       
 
         if (Input.GetKey(KeyCode.Escape))
