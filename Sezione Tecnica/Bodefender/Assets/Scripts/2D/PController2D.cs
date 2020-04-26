@@ -13,6 +13,10 @@ public class PController2D : Player
     public Camera cam;
 
 
+    //animation
+    public Animator animator;
+    
+
     //double-jump
     public float jumpVelocity;
     private bool Grounded;
@@ -39,7 +43,8 @@ public class PController2D : Player
        
         Movement_character();
         Direction();
-       
+
+       // animator.SetFloat("Speed", Math.Abs( horizontalMove));
       
 
         if (Input.GetKey(KeyCode.Escape))

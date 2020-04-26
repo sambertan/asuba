@@ -9,12 +9,19 @@ public class EnemyMovementBackAndForth : Enemy
     float timeleft;
     public bool moveRight;
     public int dannoContatto;
-
+    public int health = 3;
+    public Animator animator;
     SpriteRenderer sprite;
 
 
     void Update()
     {
+
+
+        
+
+
+
         timeleft = timeleft - Time.deltaTime;
         if(timeleft <= 0)
         {
@@ -30,6 +37,8 @@ public class EnemyMovementBackAndForth : Enemy
         {
             transform.Translate(-1 * Time.deltaTime * speed, 0, 0);
         }
+
+
         
     }
 
