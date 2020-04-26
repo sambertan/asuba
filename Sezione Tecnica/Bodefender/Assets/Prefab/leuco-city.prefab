@@ -186,11 +186,12 @@ MonoBehaviour:
   damageImmunityTime: 3
   spawnPoint: {x: 0, y: 0, z: 0}
   blinkingGapS: 0.2
-  BlinkingColor: {r: 0.9704772, g: 1, b: 0.3726415, a: 1}
+  BlinkingColor: {r: 0.9339623, g: 0.048460312, b: 0.10902687, a: 1}
   defaultMovementSpeed: 5
   runMultipler: 2
   rb: {fileID: 3376819693851110296}
   cam: {fileID: 0}
+  animator: {fileID: 3376819693851110294}
   jumpVelocity: 5
   gCheck: {fileID: 3376819692466372634}
   Radius: 0.6

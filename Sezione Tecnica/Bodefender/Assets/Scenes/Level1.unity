@@ -397,12 +397,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441a41d3d25036243afcdc2e831fb8ca, type: 3}
---- !u!95 &832826331 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3376819693851110294, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-    type: 3}
-  m_PrefabInstance: {fileID: 3376819694182923903}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1164430531 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8221749409862844322, guid: 627816e8fa09fc34f836827f6a0f7c72,
@@ -21289,31 +21283,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1164430531}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 832826331}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: BlinkingColor.r
-      value: 0.9339623
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: BlinkingColor.g
-      value: 0.048460312
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: BlinkingColor.b
-      value: 0.10902687
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: blinkingGapS
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_Name
