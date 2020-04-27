@@ -618,7 +618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784525440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -574, y: 293, z: -5201.228}
+  m_LocalPosition: {x: -555, y: 289, z: -5201.228}
   m_LocalScale: {x: 9.97013, y: 10.251621, z: 65.01535}
   m_Children: []
   m_Father: {fileID: 45586328}
@@ -21780,7 +21780,7 @@ PrefabInstance:
     - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
@@ -37553,6 +37553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221749409862844322, guid: 627816e8fa09fc34f836827f6a0f7c72,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5.1216145
       objectReference: {fileID: 0}
     - target: {fileID: 8221749409862844325, guid: 627816e8fa09fc34f836827f6a0f7c72,
         type: 3}

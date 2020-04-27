@@ -55,7 +55,7 @@ public class PController2D : Player
     }
     void Movement_character()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && grounded)
             defaultMovementSpeed = 10f;
         else
             defaultMovementSpeed = 5f;
