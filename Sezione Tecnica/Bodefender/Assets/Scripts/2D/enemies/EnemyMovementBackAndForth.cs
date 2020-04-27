@@ -9,36 +9,32 @@ public class EnemyMovementBackAndForth : Enemy
     float timeleft;
     public bool moveRight;
     public int dannoContatto;
-    public Animator animator;
+    //public Animator animator;
     SpriteRenderer sprite;
+
+    
 
 
     void Update()
     {
-
-
-        
-
-
-
-        timeleft = timeleft - Time.deltaTime;
-        if(timeleft <= 0)
+        if (isAlive)
         {
-            timeleft = time;
-            moveRight = !moveRight;
-            sprite.flipX = !sprite.flipX;
+            timeleft = timeleft - Time.deltaTime;
+            if (timeleft <= 0)
+            {
+                timeleft = time;
+                moveRight = !moveRight;
+                sprite.flipX = !sprite.flipX;
+            }
+            if (moveRight)
+            {
+                transform.Translate(1 * Time.deltaTime * speed, 0, 0);
+            }
+            else
+            {
+                transform.Translate(-1 * Time.deltaTime * speed, 0, 0);
+            }
         }
-        if (moveRight)
-        {
-            transform.Translate(1 * Time.deltaTime * speed,0,0);
-        }
-        else
-        {
-            transform.Translate(-1 * Time.deltaTime * speed, 0, 0);
-        }
-
-
-        
     }
 
     private void Start()

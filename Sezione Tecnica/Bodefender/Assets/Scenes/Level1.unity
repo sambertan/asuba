@@ -924,12 +924,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e90e88bd92fcd44a41712bce352d46, type: 3}
---- !u!1839735485 &1305517252 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 7916134859861797121, guid: 97c342984cc00ed409e3b512403c3f1b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7916134860663378786}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334852962
 GameObject:
   m_ObjectHideFlags: 0
@@ -21691,17 +21685,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3376819692466372635, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 3376819692466372635, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110297, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21762,26 +21745,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1164430531}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: Ground.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: t
-      value: 
-      objectReference: {fileID: 1305517252}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: djump
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3376819693851110300, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: m_Name

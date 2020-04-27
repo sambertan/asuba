@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
+  m_Mass: 1500
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -149,8 +149,6 @@ MonoBehaviour:
   time: 3
   moveRight: 0
   dannoContatto: 1
-  health: 3
-  animator: {fileID: 827143319}
 --- !u!95 &827143319
 Animator:
   serializedVersion: 3

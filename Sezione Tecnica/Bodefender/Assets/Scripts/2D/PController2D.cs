@@ -96,17 +96,14 @@ public class PController2D : Player
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        
-            if (collision.gameObject.tag == "Ground")
-                {
+
+
+        if (collision.gameObject.tag == "Ground")
+        {
             jump = maxjump;
             grounded = true;
-                
-            Debug.Log("Stay the fuck down bitch");
-            }
-           
-        
+
+        }
     }
 
 
