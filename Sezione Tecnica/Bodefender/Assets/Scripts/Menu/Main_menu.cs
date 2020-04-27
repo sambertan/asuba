@@ -15,5 +15,14 @@ public class Main_menu : MonoBehaviour
         Debug.Log("Arrivesos");
         Application.Quit();
     }
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+    public void BToM()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
+   
    
 }

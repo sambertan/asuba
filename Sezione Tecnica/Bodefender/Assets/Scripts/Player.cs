@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
     public float damageImmunityTime=3;
     protected float damageTimeLeft=0;
 
-    public Vector3 spawnPoint;
+    //public Vector3 spawnPoint;
 
     public int ActualHealth { get => actualHealth; }
     public int ActualShield { get => actualShield; }
@@ -26,10 +27,10 @@ public class Player : MonoBehaviour
 
     protected void Start()
     {
-        spawnPoint = transform.position;
+      
 
         actualHealth = maxHealth;
-        //actualShield = maxShield;
+        actualShield = maxShield;
         actualShield = 0;
 
         sprite=GetComponent<SpriteRenderer>();
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
             actualHealth = Mathf.Clamp(actualHealth - amount, 0, maxHealth);
             if(actualHealth == 0)
             {
-                Die();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             }
         }
         Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
@@ -97,12 +98,6 @@ public class Player : MonoBehaviour
         Debug.Log($"Shieldato shieldPlayer:{actualShield}/{maxShield}");
     }
 
-    public void Die()
-    {
-        actualHealth = maxHealth;
-        transform.position = spawnPoint;
-    }
-
     #region privates
 
     void ChangeBlink()
@@ -112,6 +107,8 @@ public class Player : MonoBehaviour
         else
             sprite.color = new Color(255, 255, 255);
     }
+
+   
 
     #endregion
 }
