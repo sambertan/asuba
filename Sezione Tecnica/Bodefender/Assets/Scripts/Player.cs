@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     public float damageImmunityTime=3;
     protected float damageTimeLeft=0;
 
-    //public Vector3 spawnPoint;
+    public int Actualscene;
+    public static int DeathScene = 0;
 
     public int ActualHealth { get => actualHealth; }
     public int ActualShield { get => actualShield; }
@@ -27,13 +28,14 @@ public class Player : MonoBehaviour
 
     protected void Start()
     {
-      
 
+       
         actualHealth = maxHealth;
         actualShield = maxShield;
         actualShield = 0;
-
-        sprite=GetComponent<SpriteRenderer>();
+        Actualscene = SceneManager.GetActiveScene().buildIndex;
+        
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     protected void Update()
@@ -73,7 +75,8 @@ public class Player : MonoBehaviour
             actualHealth = Mathf.Clamp(actualHealth - amount, 0, maxHealth);
             if(actualHealth == 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                DeathScene = Actualscene;
+                SceneManager.LoadScene(6);
             }
         }
         Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");

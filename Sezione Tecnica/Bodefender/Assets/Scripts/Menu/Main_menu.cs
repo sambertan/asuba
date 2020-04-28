@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Main_menu : MonoBehaviour
 {
-    public Main_menu main_menù;
+   public Main_menu main_menù;
+  
    public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -16,12 +17,13 @@ public class Main_menu : MonoBehaviour
         Application.Quit();
     }
     public void Retry()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    { 
+            SceneManager.LoadScene(Player.DeathScene);
     }
     public void BToM()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 5);
     }
    
    
