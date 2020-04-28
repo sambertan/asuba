@@ -65,21 +65,30 @@ public class PController2D : Player
 
         if (Input.GetKeyDown(KeyCode.W))
         {
+            animator.SetBool("isJumping", true);
             if (jump > 0)
             {
+               
                 rb.AddForce(Vector3.up * jumpVelocity, ForceMode2D.Impulse);
                 grounded = false;
                 jump = jump - 1;
+              
                 
             }
             if(jump == 0)
             {
+                
                 return;
             }
        }
        
     }
     
+
+    void Onlanding()
+    {
+        animator.SetBool("isJumping", false);
+    }
 
     void Direction()
     {
@@ -100,6 +109,7 @@ public class PController2D : Player
 
         if (collision.gameObject.tag == "Ground")
         {
+            animator.SetBool("isJumping", false);
             jump = maxjump;
             grounded = true;
 

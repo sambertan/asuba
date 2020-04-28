@@ -9,7 +9,7 @@ public class EnemyMovementBackAndForth : Enemy
     float timeleft;
     public bool moveRight;
     public int dannoContatto;
-    //public Animator animator;
+    public Animator animator;
     SpriteRenderer sprite;
 
     
