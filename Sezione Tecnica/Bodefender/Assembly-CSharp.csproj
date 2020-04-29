@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\2D\PController2D.cs" />
-    <Compile Include="Assets\Scripts\2D\Shootin2D.cs" />
     <Compile Include="Assets\Scripts\2D\Shooting2D.cs" />
     <Compile Include="Assets\Scripts\2D\Terrain.cs" />
     <Compile Include="Assets\Scripts\2D\Trampolino.cs" />
