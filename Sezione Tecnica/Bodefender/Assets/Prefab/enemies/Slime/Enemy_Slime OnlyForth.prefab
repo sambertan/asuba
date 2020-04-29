@@ -31,17 +31,17 @@ PrefabInstance:
     - target: {fileID: 6973071954930721322, guid: 441a41d3d25036243afcdc2e831fb8ca,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_Slime (1)
+      value: Enemy_Slime OnlyForth
       objectReference: {fileID: 0}
     - target: {fileID: 6973071954930721326, guid: 441a41d3d25036243afcdc2e831fb8ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.32
+      value: 11.000711
       objectReference: {fileID: 0}
     - target: {fileID: 6973071954930721326, guid: 441a41d3d25036243afcdc2e831fb8ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.92
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6973071954930721326, guid: 441a41d3d25036243afcdc2e831fb8ca,
         type: 3}
@@ -87,6 +87,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973071954930721327, guid: 441a41d3d25036243afcdc2e831fb8ca,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1588634874336267847, guid: 441a41d3d25036243afcdc2e831fb8ca, type: 3}

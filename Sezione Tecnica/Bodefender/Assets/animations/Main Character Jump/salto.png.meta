@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -9001618934849657234
     second: salto_7
+  - first:
+      213: -6359629577199829841
+    second: salto_0
+  - first:
+      213: 5287024886058768819
+    second: salto_1
+  - first:
+      213: -714611786303934341
+    second: salto_2
+  - first:
+      213: 2505900870341692179
+    second: salto_3
+  - first:
+      213: 388150054311407579
+    second: salto_4
+  - first:
+      213: 7754056275161798760
+    second: salto_5
+  - first:
+      213: -6785786191639074242
+    second: salto_6
+  - first:
+      213: 3001500227929492500
+    second: salto_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -69,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 90
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +137,10 @@ TextureImporter:
       name: salto_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1790.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +148,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95de2d5f71b141060800000000000000
-      internalID: 6923188316897733977
+      spriteID: facbfe3289e0eb7a0800000000000000
+      internalID: -6359629577199829841
       vertices: []
       indices: 
       edges: []
@@ -134,10 +158,10 @@ TextureImporter:
       name: salto_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1535.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7891629a2b557d640800000000000000
-      internalID: 5104642928478132615
+      spriteID: 3b9de2c3f194f5940800000000000000
+      internalID: 5287024886058768819
       vertices: []
       indices: 
       edges: []
@@ -155,10 +179,10 @@ TextureImporter:
       name: salto_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1280.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f346bea342e58ab0800000000000000
-      internalID: -5006346630430571533
+      spriteID: b70fb05dd503516f0800000000000000
+      internalID: -714611786303934341
       vertices: []
       indices: 
       edges: []
@@ -176,10 +200,10 @@ TextureImporter:
       name: salto_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1025.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a66e51e9c66c690800000000000000
-      internalID: -7582253496403596742
+      spriteID: 31b0f03909fb6c220800000000000000
+      internalID: 2505900870341692179
       vertices: []
       indices: 
       edges: []
@@ -197,10 +221,10 @@ TextureImporter:
       name: salto_4
       rect:
         serializedVersion: 2
-        x: 2
-        y: 770.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +232,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3efbe1297c962d50800000000000000
-      internalID: 6712224338716393019
+      spriteID: bdfa7cafa6cf26500800000000000000
+      internalID: 388150054311407579
       vertices: []
       indices: 
       edges: []
@@ -218,10 +242,10 @@ TextureImporter:
       name: salto_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 515.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1763b178ac0fce420800000000000000
-      internalID: 2660766232509888113
+      spriteID: 86858697911fb9b60800000000000000
+      internalID: 7754056275161798760
       vertices: []
       indices: 
       edges: []
@@ -239,10 +263,10 @@ TextureImporter:
       name: salto_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 260.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +274,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c44720cd8dc536e80800000000000000
-      internalID: -8186597611155590068
+      spriteID: e3a2a9d496b04d1a0800000000000000
+      internalID: -6785786191639074242
       vertices: []
       indices: 
       edges: []
@@ -260,10 +284,10 @@ TextureImporter:
       name: salto_7
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5.25
-        width: 254
-        height: 255.75
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e662bd87543d31380800000000000000
-      internalID: -9001618934849657234
+      spriteID: 41ccdfefd8877a920800000000000000
+      internalID: 3001500227929492500
       vertices: []
       indices: 
       edges: []

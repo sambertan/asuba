@@ -28,11 +28,12 @@ public class Trampolino : MonoBehaviour
         }
         if (destra)
         {
+            r.velocity = new Vector2(0, pushingForce);
             r.velocity = new Vector2(pushingForce,0);
         }
         if (sinistra)
         {
-            r.velocity = new Vector2(-pushingForce, 0);
+            r.velocity = new Vector2(-pushingForce, 5);
         }
         
     }

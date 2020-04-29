@@ -14,13 +14,17 @@ public class Enemy : MonoBehaviour
 
     //animation
     Animator animator;
+    protected SpriteRenderer sprite;
+
     public int CurrentHealth {get => currentHealth;}
+    
 
     public void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     public void ChangeHealth(int amount)
@@ -35,6 +39,12 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("isAlive", false);
         isAlive = false;
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        collider.enabled = false;
+        rb.gravityScale = 0;
+        sprite.color = Color.grey;
+
+        rb.velocity = new Vector2(0, 0);
     }
 
 
