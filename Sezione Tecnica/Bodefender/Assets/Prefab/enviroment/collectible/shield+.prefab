@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2868089002970268851}
   m_Layer: 0
   m_Name: shield+
-  m_TagString: Untagged
+  m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

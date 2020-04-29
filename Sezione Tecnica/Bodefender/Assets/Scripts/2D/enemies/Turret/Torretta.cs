@@ -10,7 +10,6 @@ public class Torretta : Enemy
 
     public float radiusDetect=10;
 
-    Rigidbody2D rb;
     Vector2 defaultPosition;
 
     //sparo
@@ -24,10 +23,8 @@ public class Torretta : Enemy
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        defaultPosition = rb.position;
-
         base.Start();
+        defaultPosition = rb.position;
     }
 
     
@@ -40,7 +37,7 @@ public class Torretta : Enemy
 
     void PointAndShoot()
     {
-        firePoint.rotation.Set(0,0,rb.rotation,0    );
+        firePoint.rotation.Set(0,0,rb.rotation,0);
         playerPosition = player.transform.position;
         Vector2 difference = playerPosition - rb.position;
         rb.rotation = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 180f;

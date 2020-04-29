@@ -144,12 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75505a279acce5845ab4e33336b56af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 8
   speed: 1
   time: 3
   moveRight: 0
   dannoContatto: 1
-  animator: {fileID: 0}
 --- !u!95 &827143319
 Animator:
   serializedVersion: 3

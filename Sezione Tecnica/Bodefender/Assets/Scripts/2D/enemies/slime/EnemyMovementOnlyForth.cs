@@ -8,7 +8,6 @@ public class EnemyMovementOnlyForth : Enemy
     public bool moveRight;
     public int dannoContatto;
 
-    SpriteRenderer sprite;
 
     void Start()
     {
@@ -19,6 +18,9 @@ public class EnemyMovementOnlyForth : Enemy
 
     void Update()
     {
+        if (!isAlive)
+            return;
+
         if (moveRight)
         {
             transform.Translate(1 * Time.deltaTime * speed, 0, 0);
@@ -31,6 +33,7 @@ public class EnemyMovementOnlyForth : Enemy
 
     private void OnCollisionEnter2D(Collision2D Oggetto) //il nemico continuerà a moversi in avanti e cambierà direzione solo se sbatterà contro un muro.   
     {
+
         Player Giocatore = Oggetto.collider.GetComponent<Player>();
         Terrain terreno = Oggetto.collider.GetComponent<Terrain>();
         if (terreno != null)

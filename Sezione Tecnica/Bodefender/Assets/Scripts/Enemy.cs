@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth=100;
     int currentHealth;
 
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     //death
     protected bool isAlive=true;
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth=Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(CurrentHealth + "/" + maxHealth);
+        Debug.Log("Enemy:" + CurrentHealth + "/" + maxHealth);
         if (currentHealth == 0)
             Die();
     }
@@ -40,11 +40,11 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isAlive", false);
         isAlive = false;
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        collider.enabled = false;
-        rb.gravityScale = 0;
-        sprite.color = Color.grey;
-
         rb.velocity = new Vector2(0, 0);
+        rb.gravityScale = 0;
+        collider.enabled = false;
+        
+        sprite.color = Color.grey;
     }
 
 
