@@ -80,10 +80,24 @@ public class PController2D : Player
                 
                 return;
             }
+
+
+                
        }
+
+        if(defaultMovementSpeed > 0 && Shooting2D.shooting)
+        {
+            animator.SetBool("isShooting", true);
+        }
+        else
+        {
+            animator.SetBool("isShooting", false);
+        }
        
     }
     
+
+   
 
     void Onlanding()
     {
