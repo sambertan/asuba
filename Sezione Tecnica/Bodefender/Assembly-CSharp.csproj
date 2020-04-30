@@ -83,7 +83,9 @@
     <Compile Include="Assets\Scripts\Menu\Main_menu.cs" />
     <Compile Include="Assets\Scripts\Menu\Options_menu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\UI\BulletsBar.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\UI\ShieldBar.cs" />
     <Compile Include="Assets\Scripts\collectible\healHealth.cs" />
     <Compile Include="Assets\Scripts\collectible\healShield.cs" />
     <Reference Include="Unity.Timeline.Editor">

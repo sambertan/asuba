@@ -79,8 +79,7 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene(6);
             }
         }
-        Debug.Log($"lifePlayer:{actualHealth}/{maxHealth}");
-        Debug.Log($"shieldPlayer:{actualShield}/{maxShield}");
+        Debug.Log("PlayerShield:" + actualShield + " PlayerHealth:" + actualHealth);
         damageTimeLeft = damageImmunityTime;
         blinkingleft = blinkingGapS;
         ChangeBlink();
