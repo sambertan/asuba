@@ -49,7 +49,7 @@ public class PController2D : Player
 
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(1);
         }
         base.Update();
     }
@@ -128,6 +128,8 @@ public class PController2D : Player
             grounded = true;
 
         }
+        if (collision.gameObject.tag == "Portal")
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 

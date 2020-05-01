@@ -23,8 +23,13 @@ public class Main_menu : MonoBehaviour
     public void BToM()
     {
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 5);
+        SceneManager.LoadScene(1);
     }
+    public void Training()
+    {
+        SceneManager.LoadScene(7);
+    }
+    
    
    
 }
