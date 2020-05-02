@@ -73,5 +73,6 @@ public class Shooting2D : MonoBehaviour
     {
         reloadLeft = reloadTime;
         alreadyReloaded = false;
+        bulletsBar.ReloadAnimationStart(reloadTime);
     }
 }
