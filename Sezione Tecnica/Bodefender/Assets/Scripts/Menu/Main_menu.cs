@@ -29,6 +29,7 @@ public class Main_menu : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+   
     
    
    

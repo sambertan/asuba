@@ -16,7 +16,9 @@ public class PController2D : Player
 
     //animation
     public Animator animator;
-    
+
+   
+
 
     //Higerjump
     public float jumpVelocity;
@@ -48,10 +50,7 @@ public class PController2D : Player
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
       
 
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(1);
-        }
+       
         base.Update();
     }
     void Movement_character()
@@ -132,7 +131,8 @@ public class PController2D : Player
         if (collision.gameObject.tag == "Portal")
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+   
+   
 
 
 }
