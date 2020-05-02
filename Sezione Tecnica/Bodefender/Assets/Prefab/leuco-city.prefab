@@ -226,6 +226,8 @@ MonoBehaviour:
   firePoint: {fileID: 301465825}
   bulletPrefab: {fileID: 1994643163935594522, guid: 37c5be3245d5efd4ab7f7d8c32ae047a,
     type: 3}
+  reloadTime: 3
+  reloadLeft: 0
 --- !u!58 &1337864084
 CircleCollider2D:
   m_ObjectHideFlags: 0

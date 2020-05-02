@@ -23,6 +23,7 @@ public class PController2D : Player
     public int jump;
     public int maxjump = 2;
     public bool grounded;
+
     //proiettili
     public static int direction;
 
@@ -83,7 +84,7 @@ public class PController2D : Player
 
 
                 
-       }
+        }
 
         if(defaultMovementSpeed > 0 && Shooting2D.shooting)
         {

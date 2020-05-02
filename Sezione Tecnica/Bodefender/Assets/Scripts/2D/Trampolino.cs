@@ -15,8 +15,16 @@ public class Trampolino : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Rigidbody2D r = collision.GetComponent<Rigidbody2D>();
+        Animator animatorP;
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("player jump trampline");
+            animatorP = collision.gameObject.GetComponent<Animator>();
+            animatorP.SetBool("isJumping", true);
+        }
+                
 
-        Debug.Log("trampolino attivato");
+        Debug.Log("trampolino attivato  " + collision);
 
         if (alto)
         {
@@ -29,7 +37,6 @@ public class Trampolino : MonoBehaviour
         if (destra)
         {
             r.velocity = new Vector2(0, pushingForce);
-            r.velocity = new Vector2(pushingForce,0);
         }
         if (sinistra)
         {

@@ -10,9 +10,9 @@ public class Shooting2D : MonoBehaviour
 
 
     //reloading
-    public float reloadTime=3;
+    public float reloadTime = 3;
     public float reloadLeft;
-    bool alreadyReloaded=true;
+    bool alreadyReloaded = true;
 
 
     //shootingCounter
@@ -22,12 +22,12 @@ public class Shooting2D : MonoBehaviour
     //BulletsBar
     BulletsBar bulletsBar;
 
-    public int Bulletsleft {get => bulletsleft;}
-    public int Maxbullet {get => maxbullet;}
+    public int Bulletsleft { get => bulletsleft; }
+    public int Maxbullet { get => maxbullet; }
 
     private void Start()
     {
-        bulletsBar = GameObject.FindGameObjectWithTag("UI / BulletsBar").GetComponent<BulletsBar>();
+            bulletsBar = GameObject.FindGameObjectWithTag("UI / BulletsBar").GetComponent<BulletsBar>();
         bulletsleft = maxbullet;
         shooting = true;
     }
@@ -38,7 +38,7 @@ public class Shooting2D : MonoBehaviour
         {
             reloadLeft -= Time.deltaTime;
         }
-        else if(!alreadyReloaded)
+        else if (!alreadyReloaded)
         {
             alreadyReloaded = true;
             bulletsleft = maxbullet;
@@ -48,21 +48,21 @@ public class Shooting2D : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && bulletsleft > 0)
             {
-                Shoot();   
+                Shoot();
             }
             if (Input.GetKeyDown(KeyCode.R) && bulletsleft < maxbullet)
             {
                 reload();
             }
         }
-         
+
     }
 
     void Shoot()
     {
         if (shooting)
         {
-           
+
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bulletsleft--;
             bulletsBar.SetBarSizeShoot();
