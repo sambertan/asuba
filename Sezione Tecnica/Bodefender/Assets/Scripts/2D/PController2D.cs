@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
@@ -17,6 +18,12 @@ public class PController2D : Player
     //animation
     public Animator animator;
 
+    //Story
+    public Image panel;
+
+    //Pause
+    public bool paused;
+    public Image pause_panel;
    
 
 
@@ -41,11 +48,12 @@ public class PController2D : Player
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.anyKeyDown)
+            panel.gameObject.SetActive(false);
        
         Movement_character();
         Direction();
-       
+        Pause();
 
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
       
@@ -95,9 +103,24 @@ public class PController2D : Player
         }
        
     }
-    
 
-   
+    void Pause()
+    {
+        if (paused)
+        { 
+            pause_panel.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
+        else
+        {
+            pause_panel.gameObject.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+            paused = !paused;
+    }
+
+
 
     void Onlanding()
     {
