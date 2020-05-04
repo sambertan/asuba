@@ -8,6 +8,9 @@ public class Shooting2D : MonoBehaviour
     public GameObject bulletPrefab;
     public static bool shooting;
 
+    //Animation
+    public Animator animator;
+
 
     //reloading
     public float reloadTime = 3;
@@ -48,7 +51,10 @@ public class Shooting2D : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && bulletsleft > 0)
             {
+
                 Shoot();
+
+                animator.SetBool("isShooting", true);
             }
             if (Input.GetKeyDown(KeyCode.R) && bulletsleft < maxbullet)
             {

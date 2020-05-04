@@ -93,6 +93,7 @@ public class PController2D : Player
                 
         }
 
+        /*
         if(defaultMovementSpeed > 0 && Shooting2D.shooting)
         {
             animator.SetBool("isShooting", true);
@@ -101,7 +102,7 @@ public class PController2D : Player
         {
             animator.SetBool("isShooting", false);
         }
-       
+       */
     }
 
     void Pause()
