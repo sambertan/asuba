@@ -27,7 +27,7 @@ public class BulletsBar : MonoBehaviour
         widthUnit = baseWidth / gun.Maxbullet;
 
         reloadAnimationLine = GameObject.FindGameObjectWithTag("UI/reloadBar").GetComponent<Image>();
-        lineStopper = GameObject.FindGameObjectWithTag("UI/reloadBarStopper").GetComponent<Image>();
+       lineStopper = GameObject.FindGameObjectWithTag("UI/reloadBarStopper").GetComponent<Image>();
 
         startingXDiffToStopper = Mathf.Abs(lineStopper.gameObject.transform.position.x - reloadAnimationLine.gameObject.transform.position.x);
     }

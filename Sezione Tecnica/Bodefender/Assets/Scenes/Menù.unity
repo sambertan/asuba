@@ -2628,6 +2628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "main_men\xF9": {fileID: 0}
+  pausepanel: {fileID: 0}
 --- !u!1 &793078146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3187,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3759e7a30dd5e2e4190cae6657e89ab5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 28d6789d88fcd504cb32e287daa57bba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.134
   m_Pitch: 1
@@ -4534,7 +4535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1281233809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4696,6 +4697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "main_men\xF9": {fileID: 0}
+  pausepanel: {fileID: 0}
 --- !u!1 &1326002012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,7 +5606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1623507517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5618,6 +5620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "main_men\xF9": {fileID: 0}
+  pausepanel: {fileID: 0}
 --- !u!224 &1623507518
 RectTransform:
   m_ObjectHideFlags: 0
