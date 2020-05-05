@@ -17,7 +17,7 @@ public class Camera_following : MonoBehaviour
 
         temp.x = playerTransform.position.x;
         temp.y = playerTransform.position.y;
-        temp.z = -20;
+        
 
         transform.position = temp;
     }

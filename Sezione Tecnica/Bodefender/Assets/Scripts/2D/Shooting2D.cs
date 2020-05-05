@@ -6,7 +6,7 @@ public class Shooting2D : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public static bool shooting;
+    public int shootingFrames;
 
     //Animation
    public Animator animator;
@@ -30,13 +30,19 @@ public class Shooting2D : MonoBehaviour
 
     private void Start()
     {
-            bulletsBar = GameObject.FindGameObjectWithTag("UI / BulletsBar").GetComponent<BulletsBar>();
+        bulletsBar = GameObject.FindGameObjectWithTag("UI / BulletsBar").GetComponent<BulletsBar>();
         bulletsleft = maxbullet;
-        shooting = true;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        if (shootingFrames > 0)
+            shootingFrames--;
+        else
+            animator.SetBool("isShooting", false);
+
+
         if (reloadLeft > 0)
         {
             reloadLeft -= Time.deltaTime;
@@ -51,9 +57,10 @@ public class Shooting2D : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && bulletsleft > 0)
             {
-
+                shootingFrames = 12;
+                animator.SetBool("isShooting", true);
                 Shoot();
-
+                
               
             }
             if (Input.GetKeyDown(KeyCode.R) && bulletsleft < maxbullet)
@@ -66,16 +73,9 @@ public class Shooting2D : MonoBehaviour
 
     void Shoot()
     {
-        if (shooting)
-        {
-           
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bulletsleft--;
             bulletsBar.SetBarSizeShoot();
-           
-        }
-        
-        
     }
 
     void reload()

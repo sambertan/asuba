@@ -12,6 +12,7 @@ public class EnemyMovementOnlyForth : Enemy
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        if (moveRight) sprite.flipX = !sprite.flipX;
         base.Start();
     }
 

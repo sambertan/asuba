@@ -135,4 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 3788238234970850352}
-  shotLenght: 10
+  shotLenght: 50
