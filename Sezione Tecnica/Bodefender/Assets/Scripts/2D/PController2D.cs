@@ -24,6 +24,7 @@ public class PController2D : Player
     //Pause
     public bool paused;
     public Image pause_panel;
+    public Canvas HUD;
    
 
 
@@ -35,6 +36,12 @@ public class PController2D : Player
 
     //proiettili
     public static int direction;
+
+    //ZA WARUDO
+
+    public AudioSource zawarudo;
+    public AudioSource soundtrack;
+    public float Volume;
 
    
         
@@ -108,17 +115,24 @@ public class PController2D : Player
     void Pause()
     {
         if (paused)
-        { 
+        {
+            soundtrack.Pause();
+           
+            Time.timeScale = 0f;
             pause_panel.gameObject.SetActive(true);
-        Time.timeScale = 0f;
-    }
+            HUD.gameObject.SetActive(false);
+        }
         else
         {
+            zawarudo.Play();
+            soundtrack.UnPause();
             pause_panel.gameObject.SetActive(false);
+            HUD.gameObject.SetActive(true);
             Time.timeScale = 1f;
+           
         }
         if (Input.GetKeyDown(KeyCode.Escape))
-            paused = !paused;
+       paused = !paused;
     }
 
 
@@ -139,7 +153,9 @@ public class PController2D : Player
         {
             sprite.flipX = true;
             direction = -1;
-        }       
+            
+
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -154,7 +170,9 @@ public class PController2D : Player
         }
         if (collision.gameObject.tag == "Portal")
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      
     }
+   
    
    
 

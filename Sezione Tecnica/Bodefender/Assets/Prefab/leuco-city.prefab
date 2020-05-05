@@ -162,10 +162,17 @@ MonoBehaviour:
   rb: {fileID: 3376819693851110296}
   cam: {fileID: 0}
   animator: {fileID: 3376819693851110294}
+  panel: {fileID: 0}
+  paused: 0
+  pause_panel: {fileID: 0}
+  HUD: {fileID: 0}
   jumpVelocity: 5
   jump: 0
   maxjump: 2
   grounded: 0
+  zawarudo: {fileID: 0}
+  soundtrack: {fileID: 0}
+  Volume: 2
 --- !u!95 &3376819693851110294
 Animator:
   serializedVersion: 3

@@ -9,7 +9,7 @@ public class Shooting2D : MonoBehaviour
     public static bool shooting;
 
     //Animation
-    public Animator animator;
+   // public Animator animator;
 
 
     //reloading
@@ -54,7 +54,7 @@ public class Shooting2D : MonoBehaviour
 
                 Shoot();
 
-                animator.SetBool("isShooting", true);
+               // animator.SetBool("isShooting", true);
             }
             if (Input.GetKeyDown(KeyCode.R) && bulletsleft < maxbullet)
             {

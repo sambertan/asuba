@@ -9,7 +9,7 @@ public class Main_menu : MonoBehaviour
    public Main_menu main_menù;
     public Image pausepanel;
   
-   public void Play()
+   public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

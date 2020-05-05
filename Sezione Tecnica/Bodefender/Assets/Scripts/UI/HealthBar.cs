@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Sprite[] status = new Sprite[11];
+    public Sprite[] status = new Sprite[10];
     Image SpriteSImage;
     Player player;
 

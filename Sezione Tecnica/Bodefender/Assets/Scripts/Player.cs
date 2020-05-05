@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
         Debug.Log($"Shieldato shieldPlayer:{actualShield}/{maxShield}");
     }
 
+
     #region privates
 
     void ChangeBlink()

@@ -9,6 +9,7 @@ public class EnemyMovementBackAndForth : Enemy
     float timeleft;
     public bool moveRight;
     public int dannoContatto;
+    
 
     private void Start()
     {
@@ -37,12 +38,20 @@ public class EnemyMovementBackAndForth : Enemy
                 transform.Translate(-1 * Time.deltaTime * speed, 0, 0);
             }
         }
+       
+      
+        
+          
+        
     }
 
     private void OnCollisionEnter2D(Collision2D Oggetto)
     {
         if (!isAlive)
+        
+          
             return;
+       
         Player Giocatore = Oggetto.collider.GetComponent<Player>();
         Terrain terreno = Oggetto.collider.GetComponent<Terrain>();
         if (terreno != null)
