@@ -61,23 +61,20 @@ public class Shooting2D : MonoBehaviour
                 reload();
             }
         }
-
+        //animator.SetBool("isShooting", shooting);
     }
 
     void Shoot()
     {
         if (shooting)
         {
-            animator.SetBool("isShooting", true);
+           
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bulletsleft--;
             bulletsBar.SetBarSizeShoot();
            
         }
-        else
-        {
-            animator.SetBool("isShooting", false);
-        }
+        
         
     }
 
