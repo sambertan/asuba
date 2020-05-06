@@ -551,14 +551,14 @@ PrefabInstance:
       objectReference: {fileID: 1459877764}
     - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
-      propertyPath: pause_panel
-      value: 
-      objectReference: {fileID: 783422270}
-    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
-        type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 30593719}
+    - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
+        type: 3}
+      propertyPath: pause_panel
+      value: 
+      objectReference: {fileID: 783422270}
     - target: {fileID: 3376819693851110299, guid: ac4eb8c59269c5f4180f19e0f63b3e07,
         type: 3}
       propertyPath: HUD

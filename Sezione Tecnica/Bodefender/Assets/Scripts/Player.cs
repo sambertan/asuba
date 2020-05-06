@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     protected SpriteRenderer sprite;
     bool ended;
 
+    //keys and doors
+    List<Color> keys = new List<Color>();
+
     protected void Start()
     {
 
@@ -79,7 +82,6 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene(6);
             }
         }
-        Debug.Log("PlayerShield:" + actualShield + " PlayerHealth:" + actualHealth);
         damageTimeLeft = damageImmunityTime;
         blinkingleft = blinkingGapS;
         ChangeBlink();
@@ -90,16 +92,35 @@ public class Player : MonoBehaviour
     {
         if (amount < 1) return;
         actualHealth = Mathf.Clamp(actualHealth + amount, 0, maxHealth);
-        Debug.Log($"Curato lifePlayer:{actualHealth}/{maxHealth}");
     }
 
     public void HealArmor(int amount)
     {
         if (amount < 1) return;
         actualShield = Mathf.Clamp(actualShield + amount, 0, maxShield);
-        Debug.Log($"Shieldato shieldPlayer:{actualShield}/{maxShield}");
     }
 
+
+    public void Addkey(Color KeyC)
+    {
+        keys.Add(KeyC);
+    }
+
+    public bool UseKey(Color KeyC)
+    {
+        bool contains=false;
+        foreach(var e in keys)
+        {
+            contains = (e == KeyC);
+            if (contains)
+                break;
+        }
+        if(contains)
+        {
+            keys.Remove(KeyC);
+        }
+        return contains;
+    }
 
     #region privates
 
