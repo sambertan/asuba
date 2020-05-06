@@ -63,11 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraScreen.cs" />
     <Compile Include="Assets\Scripts\2D\PController2D.cs" />
     <Compile Include="Assets\Scripts\2D\Shooting2D.cs" />
     <Compile Include="Assets\Scripts\2D\Terrain.cs" />
     <Compile Include="Assets\Scripts\2D\Trampolino.cs" />
+    <Compile Include="Assets\Scripts\2D\enemies\Occhio Shooter\OcchioAI.cs" />
+    <Compile Include="Assets\Scripts\2D\enemies\Occhio Shooter\OcchioBullet.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Spuntoni.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Turret\Torretta.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Turret\TurretProjectile.cs" />
@@ -78,9 +79,9 @@
     <Compile Include="Assets\Scripts\3D\Stamina.cs" />
     <Compile Include="Assets\Scripts\Boss_AI.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\CameraScreen.cs" />
     <Compile Include="Assets\Scripts\Camera_following.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\Menu\Control_Menu.cs" />
     <Compile Include="Assets\Scripts\Menu\FadingIn.cs" />
     <Compile Include="Assets\Scripts\Menu\Loading_Script.cs" />
@@ -92,8 +93,10 @@
     <Compile Include="Assets\Scripts\UI\BulletsBar.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\ShieldBar.cs" />
+    <Compile Include="Assets\Scripts\collectible\Key.cs" />
     <Compile Include="Assets\Scripts\collectible\healHealth.cs" />
     <Compile Include="Assets\Scripts\collectible\healShield.cs" />
+    <Compile Include="Assets\Scripts\props\Freccia.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
