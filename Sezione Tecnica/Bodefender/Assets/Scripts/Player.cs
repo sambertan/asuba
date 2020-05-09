@@ -103,6 +103,7 @@ public class Player : MonoBehaviour
 
     public void Addkey(Color KeyC)
     {
+        Debug.Log("chiave aggiunta " + KeyC);
         keys.Add(KeyC);
     }
 

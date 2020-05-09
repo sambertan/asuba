@@ -5,7 +5,7 @@ using System.Threading;
 
 public class Torretta : Enemy
 {
-    public GameObject player;
+    private GameObject player;
     Vector2 playerPosition;
 
     public float radiusDetect=10;
@@ -25,6 +25,7 @@ public class Torretta : Enemy
     {
         base.Start();
         defaultPosition = rb.position;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     

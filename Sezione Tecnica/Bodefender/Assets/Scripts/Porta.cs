@@ -15,6 +15,7 @@ public class Porta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            
             if (collision.gameObject.GetComponent<Player>().UseKey(keyColor))
             {
                 Open();
