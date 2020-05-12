@@ -21,22 +21,18 @@ public class Bullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collidedElement)
     {
+        string collidedTag = collidedElement.gameObject.tag;
         Enemy collidedScriptE = collidedElement.GetComponent<Enemy>();
         Player collidedScriptP = collidedElement.GetComponent<Player>();
 
-        if (collidedElement.gameObject.CompareTag("collectible"))
+        if (collidedTag == "collectible" || collidedTag== "Player")
             return;
 
         if (collidedScriptE != null)
         {
             collidedScriptE.ChangeHealth(-2);
         }
-
-        if (collidedScriptP == null)
-        {
-            Destroy(gameObject);
-        }
-
+        GameObject.Destroy(this.gameObject);
     }
 
     private void Update()

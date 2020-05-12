@@ -37,13 +37,14 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        animator.SetBool("isAlive", false);
+        animator.SetBool("isAlive", false);   
         isAlive = false;
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         rb.velocity = new Vector2(0, 0);
         rb.gravityScale = 0;
         collider.enabled = false;
-        
+        rb.bodyType = RigidbodyType2D.Static;
+
         sprite.color = Color.grey;
     }
 
