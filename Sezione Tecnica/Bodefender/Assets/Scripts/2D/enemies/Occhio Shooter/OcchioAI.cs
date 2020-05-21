@@ -44,7 +44,6 @@ public class OcchioAI : Enemy
         if (!isAlive)
             return;
 
-        Debug.Log(CurrentHealth + "/" + maxHealth);
         distancex = transform.position.x - target.position.x;
         directionRight = Mathf.Sign(distancex) == 1;
         distancex = Mathf.Abs(distancex);

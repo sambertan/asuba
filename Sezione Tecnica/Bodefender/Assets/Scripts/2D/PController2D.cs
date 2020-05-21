@@ -82,8 +82,12 @@ public class PController2D : Player
             animator.SetBool("isJumping", true);
             if (jump > 0)
             {
-               
-                rb.AddForce(Vector3.up * jumpVelocity, ForceMode2D.Impulse);
+
+                //rb.AddForce(Vector3.up * jumpVelocity, ForceMode2D.Impulse);
+                if(rb.velocity.y>0)
+                    rb.velocity += new Vector2(0,jumpVelocity);
+                else
+                    rb.velocity = new Vector2(0, jumpVelocity);
                 grounded = false;
                 jump = jump - 1;
               
