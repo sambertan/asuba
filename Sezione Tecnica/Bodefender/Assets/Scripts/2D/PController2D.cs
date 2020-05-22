@@ -60,6 +60,7 @@ public class PController2D : Player
         Movement_character();
         Direction();
         Pause();
+        JumpingAndFalling();
 
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
       
@@ -84,15 +85,23 @@ public class PController2D : Player
             {
 
                 //rb.AddForce(Vector3.up * jumpVelocity, ForceMode2D.Impulse);
-                if(rb.velocity.y>0)
+                if (rb.velocity.y > 0)
+                {
                     rb.velocity += new Vector2(0,jumpVelocity);
+                }
                 else
-                    rb.velocity = new Vector2(0, jumpVelocity);
+                {
+                     rb.velocity = new Vector2(0, jumpVelocity);
+                  
+                }
+                  
                 grounded = false;
                 jump = jump - 1;
               
                 
             }
+
+
             if(jump == 0)
             {
                 
@@ -116,6 +125,30 @@ public class PController2D : Player
         }
        */
     }
+
+    void JumpingAndFalling()
+    {
+        if(rb.velocity.y > 0)
+        {
+            animator.SetBool("isFalling", false);
+        }
+        else if(rb.velocity.y == 0)
+        {
+            animator.SetBool("isFalling", false);
+        }
+        else if(rb.velocity.y < 0 && Mathf.Abs( Input.GetAxis("Horizontal")) > 0)
+        {
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isFalling", true);
+        }
+        
+        
+        
+    }
+
 
     void Pause()
     {
@@ -141,11 +174,6 @@ public class PController2D : Player
     }
 
 
-
-    void Onlanding()
-    {
-        animator.SetBool("isJumping", false);
-    }
 
     void Direction()
     {
