@@ -117,11 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aa0428dfb73d34e8b2f9a17f40fa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 4
   "velocit\xE0": 5
-  checkpoints:
-  - {x: 83, y: 7}
-  - {x: 100, y: 7}
+  checkpoints: []
+  damage: 1
 --- !u!50 &1281152530
 Rigidbody2D:
   serializedVersion: 4

@@ -24,7 +24,7 @@ public class Trampolino : MonoBehaviour
         }
                 
 
-        Debug.Log("trampolino attivato  " + collision);
+
 
         if (alto)
         {

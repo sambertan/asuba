@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collidedElement)
     {
+        Debug.Log("colpito");
         string collidedTag = collidedElement.gameObject.tag;
         Enemy collidedScriptE = collidedElement.GetComponent<Enemy>();
         Player collidedScriptP = collidedElement.GetComponent<Player>();
