@@ -128,17 +128,9 @@ public class PController2D : Player
 
     void JumpingAndFalling()
     {
-        if(rb.velocity.y > 0)
+        if(rb.velocity.y >= 0)
         {
             animator.SetBool("isFalling", false);
-        }
-        else if(rb.velocity.y == 0)
-        {
-            animator.SetBool("isFalling", false);
-        }
-        else if(rb.velocity.y < 0 && Mathf.Abs( Input.GetAxis("Horizontal")) > 0)
-        {
-            animator.SetBool("isFalling", true);
         }
         else
         {

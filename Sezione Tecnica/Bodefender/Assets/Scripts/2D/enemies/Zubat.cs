@@ -45,14 +45,18 @@ public class Zubat : Enemy
             {
                 currentpoint--;
                 backward = true;
-                sprite.flipX = false;
             }
             else if (currentpoint < 0)
             {
                 currentpoint++;
                 backward = false;
-                sprite.flipX = true;
             }
+
+            if(transform.position.x-checkpoints[currentpoint].x<0)
+                sprite.flipX = true;
+            else
+                sprite.flipX = false;
+
         }
     }
 

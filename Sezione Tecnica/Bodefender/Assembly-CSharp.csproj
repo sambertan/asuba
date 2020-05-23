@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\2D\enemies\Occhio Shooter\OcchioAI.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Occhio Shooter\OcchioBullet.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Spuntoni.cs" />
+    <Compile Include="Assets\Scripts\2D\enemies\SpuntoniMoventi.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Turret\Torretta.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Turret\TurretProjectile.cs" />
     <Compile Include="Assets\Scripts\2D\enemies\Zubat.cs" />
