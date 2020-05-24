@@ -21,6 +21,7 @@ public class Main_menu : MonoBehaviour
     public void Retry()
     { 
             SceneManager.LoadScene(Player.DeathScene);
+        transform.position = Checkpoint.Lastc
     }
     public void BToM()
     {
@@ -29,7 +30,11 @@ public class Main_menu : MonoBehaviour
     }
     public void Training()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(4);
+    }
+    public void Lvl2()
+    {
+        SceneManager.LoadScene(3);
     }
     
    

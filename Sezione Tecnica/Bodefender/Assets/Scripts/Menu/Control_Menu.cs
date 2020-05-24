@@ -15,7 +15,8 @@ public class Control_Menu : MonoBehaviour
     }
     void Update()
     {
-    
+        if (Input.anyKey)
+            SceneManager.LoadScene(1);
     }
 
     IEnumerator Blink()
