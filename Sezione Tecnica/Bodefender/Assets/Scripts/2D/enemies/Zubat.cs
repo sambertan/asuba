@@ -15,6 +15,8 @@ public class Zubat : Enemy
     //damage
     public int damage;
 
+    //animator
+    public Animator animator;
 
 
     void Start()
@@ -56,6 +58,11 @@ public class Zubat : Enemy
                 sprite.flipX = true;
             else
                 sprite.flipX = false;
+
+        }
+        else {
+
+            animator.SetBool("isAlive", false);
 
         }
     }

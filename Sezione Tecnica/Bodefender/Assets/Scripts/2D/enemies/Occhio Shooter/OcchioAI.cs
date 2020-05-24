@@ -28,7 +28,8 @@ public class OcchioAI : Enemy
     public float reloadTime;
     float reloadTimeLeft;
 
-
+    //animation
+    public Animator animator;
     new void Start()
     {
         base.Start();
@@ -96,6 +97,7 @@ public class OcchioAI : Enemy
     {
         if (reloadTimeLeft <= 0)
         {
+            animator.SetBool("isShooting", true);
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
             Rigidbody2D brb = bullet.GetComponent<Rigidbody2D>();
             if (directionRight)
@@ -103,6 +105,7 @@ public class OcchioAI : Enemy
             else
                 brb.AddForce(new Vector2(20, 0), ForceMode2D.Impulse);
             reloadTimeLeft = reloadTime;
+
         }
     }
 

@@ -119,8 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   "velocit\xE0": 5
-  checkpoints: []
+  checkpoints:
+  - {x: 14.9, y: 49.22}
+  - {x: 14.9, y: 40.36}
   damage: 1
+  animator: {fileID: 0}
 --- !u!50 &1281152530
 Rigidbody2D:
   serializedVersion: 4
