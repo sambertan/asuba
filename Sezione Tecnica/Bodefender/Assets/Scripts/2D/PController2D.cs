@@ -35,7 +35,7 @@ public class PController2D : Player
     public bool grounded;
 
     //proiettili
-    public static int direction;
+    public static int direction=1;
 
     //ZA WARUDO
     public AudioSource zawarudo;
@@ -100,16 +100,11 @@ public class PController2D : Player
               
                 
             }
-
-
-            if(jump == 0)
+            if (jump == 0)
             {
-                
+
                 return;
-            }
-
-
-                
+            }    
         }
 
 
@@ -128,7 +123,7 @@ public class PController2D : Player
 
     void JumpingAndFalling()
     {
-        if(rb.velocity.y >= 0)
+        if (rb.velocity.y >= -0.5f)
         {
             animator.SetBool("isFalling", false);
         }
@@ -136,9 +131,7 @@ public class PController2D : Player
         {
             animator.SetBool("isFalling", true);
         }
-        
-        
-        
+        //controllo su -0.5 per risoluzione di un bug
     }
 
 
@@ -178,8 +171,6 @@ public class PController2D : Player
         {
             sprite.flipX = true;
             direction = -1;
-            
-
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

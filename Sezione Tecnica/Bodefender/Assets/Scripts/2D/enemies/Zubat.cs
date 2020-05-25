@@ -15,8 +15,8 @@ public class Zubat : Enemy
     //damage
     public int damage;
 
-    //animator
-    public Animator animator;
+    //death
+    bool alreadydead=false;
 
 
     void Start()
@@ -28,14 +28,13 @@ public class Zubat : Enemy
         base.Start();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, checkpoints[currentpoint], velocità * Time.deltaTime);
-
         //movement
         if (isAlive)
         {
+            transform.position = Vector2.MoveTowards(transform.position, checkpoints[currentpoint], velocità * Time.deltaTime);
+
             if (Vector2.Distance(transform.position, checkpoints[currentpoint]) < 0.1f)
             {
                 if (backward)
@@ -60,11 +59,12 @@ public class Zubat : Enemy
                 sprite.flipX = false;
 
         }
-        else {
-
-            animator.SetBool("isAlive", false);
+        else if (!alreadydead)
+        {
+            alreadydead = true;
 
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
