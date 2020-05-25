@@ -23,7 +23,7 @@ public class PController2D : Player
 
     //Pause
     public bool paused;
-    public Image pause_panel;
+    public Canvas pause_panel;
     public Canvas HUD;
    
 
@@ -42,7 +42,7 @@ public class PController2D : Player
     public AudioSource soundtrack;
     public float Volume;
 
-   
+  
         
     void Start()
     {
@@ -175,8 +175,7 @@ public class PController2D : Player
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
+      
         if (collision.gameObject.tag == "Ground")
         {
             animator.SetBool("isJumping", false);
@@ -186,7 +185,9 @@ public class PController2D : Player
         }
         if (collision.gameObject.tag == "Portal")
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-      
+        if (collision.gameObject.tag == "Finish")
+            SceneManager.LoadScene(7);
+        
     }
    
    

@@ -20,8 +20,8 @@ public class Main_menu : MonoBehaviour
     }
     public void Retry()
     { 
-            SceneManager.LoadScene(Player.DeathScene);
-       // transform.position = Checkpoint.Lastc
+     SceneManager.LoadScene(Player.DeathScene);
+       
     }
     public void BToM()
     {
@@ -36,6 +36,10 @@ public class Main_menu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void Resume()
+    {
+      
+            }
     
    
     
