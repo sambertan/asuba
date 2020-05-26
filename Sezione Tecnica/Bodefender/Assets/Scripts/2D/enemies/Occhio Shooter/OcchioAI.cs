@@ -41,6 +41,10 @@ public class OcchioAI : Enemy
 
     void Update()
     {
+        if (CurrentHealth == 0)
+        {
+            Destroy(this.gameObject);
+        }
         if (!isAlive)
             return;
 
@@ -78,10 +82,7 @@ public class OcchioAI : Enemy
             jumpTimeLeft -= Time.deltaTime;
         if (reloadTimeLeft > 0)
             reloadTimeLeft -= Time.deltaTime;
-        if(CurrentHealth == 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
     }
 
     private void Jump()
