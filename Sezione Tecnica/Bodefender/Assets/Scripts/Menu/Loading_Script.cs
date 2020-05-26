@@ -25,7 +25,6 @@ public class Loading_Script : MonoBehaviour
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
             slider.value = progress;
-            text.text = progress * 100f + "%";
             yield return null;
         }
     }

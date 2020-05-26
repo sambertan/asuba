@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
             if(actualHealth == 0)
             {
                 DeathScene = Actualscene;
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(4);
             }
         }
         damageTimeLeft = damageImmunityTime;

@@ -10,6 +10,7 @@ public class Credits : MonoBehaviour
     public GameObject b;
     public GameObject c;
     public GameObject d;
+    public GameObject e;
     void Start()
     {
         StartCoroutine(SetCredits());
@@ -30,6 +31,9 @@ public class Credits : MonoBehaviour
         d.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         d.gameObject.SetActive(false);
+        e.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        e.gameObject.SetActive(false);
         SceneManager.LoadScene(1);
 
 

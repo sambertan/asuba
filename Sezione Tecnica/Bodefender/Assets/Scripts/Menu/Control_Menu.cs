@@ -6,18 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class Control_Menu : MonoBehaviour
 {
-    Image image;
+    public Image image;
+    
 
     void Start()
     {
-        image = GetComponent<Image>();
+       
         Blinking();
     }
     void Update()
     {
         if (Input.anyKey)
             SceneManager.LoadScene(1);
+        
     }
+  
 
     IEnumerator Blink()
     {

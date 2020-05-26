@@ -22,7 +22,7 @@ public class PController2D : Player
     public Image panel;
 
     //Pause
-    public bool paused;
+    static bool paused;
     public Canvas pause_panel;
     public Canvas HUD;
    
@@ -42,12 +42,15 @@ public class PController2D : Player
     public AudioSource soundtrack;
     public float Volume;
 
-  
+    //Lock
+    
         
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         base.Start();
+        paused = false;
+        
         
     }
 
@@ -107,7 +110,10 @@ public class PController2D : Player
             }    
         }
 
-
+        if(Input.GetKey(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene(1);
+        }
 
         /*
         if(defaultMovementSpeed > 0 && Shooting2D.shooting)
@@ -135,7 +141,7 @@ public class PController2D : Player
     }
 
 
-    void Pause()
+   void Pause()
     {
         if (paused)
         {
@@ -183,10 +189,12 @@ public class PController2D : Player
             grounded = true;
 
         }
-        if (collision.gameObject.tag == "Portal")
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (collision.gameObject.tag == "Portal1")
+            SceneManager.LoadScene(3);
+        
+       
         if (collision.gameObject.tag == "Finish")
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(5);
         
     }
    

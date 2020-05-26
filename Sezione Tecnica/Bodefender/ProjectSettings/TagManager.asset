@@ -11,6 +11,7 @@ TagManager:
   - Portal
   - UI/reloadBar
   - UI/reloadBarStopper
+  - Portal1
   layers:
   - Default
   - TransparentFX

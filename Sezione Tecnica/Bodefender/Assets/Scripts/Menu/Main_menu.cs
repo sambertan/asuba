@@ -27,19 +27,21 @@ public class Main_menu : MonoBehaviour
     {
         
         SceneManager.LoadScene(1);
+        
     }
     public void Training()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
     public void Lvl2()
     {
         SceneManager.LoadScene(3);
     }
-    public void Resume()
+    public void Lvl1()
     {
-      
+        SceneManager.LoadScene(2);
             }
+    
     
    
     
